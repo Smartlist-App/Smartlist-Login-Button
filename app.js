@@ -18,7 +18,7 @@ class SmartlistApiButton {
 </style>
 `)
     var _data = `
-<button type="button" class="smartlistLoginButton" onclick="window.location.href='${options.authURI}'" id="SL_${SmartlistApiButtonID}">
+<button type="button" class="smartlistLoginButton" onclick="window.location.href='https://smartlist.ga/dashboard/login.php?auth=true&appId=${options.authURI}'" id="SL_${SmartlistApiButtonID}">
 <svg style="vertical-align: middle;margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="${(options.iconColor ? options.iconCOlor : "#aaa")}" baseProfile="tiny" overflow="inherit" version="1.2" viewBox="0 0 50 50"><path d="M8.149 16.062h6.06l-.053 3.575-6.007 5.406v-8.981zm16.758-1.979L1 35.169 3.52 38l21.485-18.954L46.486 38 49 35.169 25.097 14.083 25 14l-.093.083z"/></svg>
 Log in with Smartlist
 </button>
@@ -27,7 +27,7 @@ Log in with Smartlist
     return this;
   }
   login() {
-    window.location.href = this.options.authURI;
+    window.location.href = "https://smartlist.ga/dashboard/login.php?auth=true&appId="+ this.options.authURI;
   }
   delete(id) {
     document.getElementById('SL_'+id).outerHTML = ""
