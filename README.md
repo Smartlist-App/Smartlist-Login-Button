@@ -12,13 +12,11 @@
     <script src="/path/to/app.min.js"></script>
     <!-- If you want to be cool, use the "obfuscated.min.js" file instead -->
     <script>
-      window.addEventListener('load', () => {
+       window.addEventListener('load', () => {
         var smartlistLogin = new SmartlistApiButton(document.getElementById('loginBTN'), {
           // Required
-          authURI: "https://smartlist.ga",
-          /* 
-          For security reasons, you'll have to make a POST request from your server end, so that no one can see your API token. Enter the filename here.
-          */
+          // Get auth code from dashboard
+          authURI: "9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2d",
           // Optional styles
           iconColor: "#000",
           backgroundColor: "#fff",
