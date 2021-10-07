@@ -9,6 +9,8 @@
   </head>
   <body>
     <div id="loginBTN"></div>
+    <script src="/path/to/app.min.js"></script>
+    <!-- If you want to be cool, use the "obfuscated.min.js" file instead -->
     <script>
       window.addEventListener('load', () => {
         var smartlistLogin = new SmartlistApiButton(document.getElementById('loginBTN'), {
