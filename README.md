@@ -1,6 +1,17 @@
 # Smartlist Login Button
 ## Integrate a "Login with Smartlist" button in your project!
 
+### Installation
+```html
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@1.0.0/app.min.js" async defer></script>
+```
+```html
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@1.0.0/app.js" async defer></script>
+```
+```html
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@1.0.0/obfuscated.min.js" async defer></script>
+```
+
 ### How to Use
 ```html
 <!DOCTYPE html>
