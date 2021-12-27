@@ -20,10 +20,13 @@
     <script src="/path/to/app.min.js"></script>
     <script>
       var button = new SmartlistApiButton(document.getElementById('loginBTN'), {
-        appId: "f05210c5b4263f0ec4c3995bdab458d81d3953f354a9109520f159db1e8800bcd45b97c56dce90a1fc27ab03e0b8a9af8673747023c406299374116d6f966981",
+        appId: "YOUR_APP_ID",
         popup: true,
         callback() {
-          /* Make sure to verify the session is valid after the popup is closed!*/
+          /**
+           * We'll redirect to the oAuth URI with the token. Use window.close() to close the login window after authorization is complete
+           * Make sure to verify the session is valid after the popup is closed!
+           */
           console.log("Closed popup")
         }
       })
