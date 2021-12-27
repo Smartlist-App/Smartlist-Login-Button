@@ -83,7 +83,7 @@ left=${left}
     el.innerHTML = button;
     document.getElementById(id).addEventListener("click", () => {
       if(options.popup === true) {
-        var win = popupCenter({url: `https://smartlist.ga/dashboard/login.php?auth=true&appId=${options.appId}&close`, title: 'xtf', w: '900', h: '500'})
+        var win = popupCenter({url: `https://smartlist.ga/dashboard/login.php?auth=true&appId=${options.appId}&close`, title: 'xtf', w: '900', h: '600'})
         
         var timer = setInterval(function() { 
           if(win.closed) {
