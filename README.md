@@ -3,10 +3,10 @@
 
 ### Installation
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.min.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.min.js" async></script>
 ```
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.js" async></script>
 ```
 
 ### How to Use
