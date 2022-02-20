@@ -63,13 +63,3 @@ class SmartlistAuth {
     element.appendChild(button);
   }
 }
-
-let Auth = new SmartlistAuth('c4ca4238a0b923820dcc509a6f75849b');
-
-Auth.render('#oauth', {
-	popup: true,
-  // size: "small",
-  theme: "dark",
-  rounded: true,
-  callback: () => console.log("Closed popup. Verify that the user is logged in from your server")
-})
