@@ -49,8 +49,8 @@ class SmartlistAuth {
           token: token
         }),
         title: "Login with your Smartlist account",
-        w: 200,
-        h: 500
+        w: 500,
+        h: 700
       })
     	var timer = setInterval(function() { 
         if(window.closed) {
