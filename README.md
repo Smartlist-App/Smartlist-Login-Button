@@ -3,10 +3,10 @@
 
 ### Installation
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.1/app.min.js" async></script>
 ```
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.js" async></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.1/app.js" async></script>
 ```
 
 ### How to Use
@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="oauth"></div>
-    <script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.1/app.min.js" async></script>
     <script>
       let Auth = new SmartlistAuth('your_api_token');
       Auth.render('#oauth', {
