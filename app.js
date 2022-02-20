@@ -21,20 +21,14 @@ left=${left}
   
   return newWindow;
 }
-/** 
-  * @param {string} key - the API key
-  */
 class SmartlistAuth {
   constructor(key) {
     this.key = key;
+    console.log(this)
   }
-/**
-  * Renders the button
-  * @param {element} el - The container element
-  * @param {Object} - options - An object for the options
-  */
+
   render(el, options = {}) {
-  	document.querySelector("head").innerHTML += `<style>@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); .smartlist-oauth-button { display: inline-flex!important; align-items: center; gap: 10px; opacity: 1!important; position: static!important; border: 1.5px solid #ddd!important; font-size: 15px!important; width: 210px; color: black; outline: 0; text-decoration: none; height: 50px; padding: 0 15px; z-index: 999999999999999999999999999999999999999999999999999999!important; border-radius: 4px; font-family: "Outfit", sans-serif; user-select: none; cursor: pointer; } .smartlist-oauth-button:hover { border-color: #000!important; background-color: #eee; } .smartlist-oauth-button:active { border-color: #000; background-color: #ddd; } .smartlist-oauth-button:focus { border-color: #000!important; box-shadow: inset 0px 0px 0px 1px #000; } .smartlist-small-oauth-button span { display: none; } .smartlist-small-oauth-button { width: 50px; align-items: center; justify-content: center; height: 50px; padding: 0; } .smartlist-rounded-oauth-button { border-radius: 999px; } .smartlist-dark-oauth-button { background: #212121; color: #fff; border-color: #303030!important } .smartlist-dark-oauth-button:hover { background: #303030; border-color: #fff!important } .smartlist-dark-oauth-button:active { background: #404040 } .smartlist-dark-oauth-button:focus { border-color: #fff!important; box-shadow: inset 0px 0px 0px 1px #fff; } body {background:#000}</style>`
+  	document.querySelector("head").innerHTML += `<style>@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); .smartlist-oauth-button { display: inline-flex!important; align-items: center; gap: 10px; opacity: 1!important; position: static!important; border: 1.5px solid #ddd!important; font-size: 15px!important; width: 210px; color: black; outline: 0; text-decoration: none; height: 50px; padding: 0 15px; z-index: 999999999999999999999999999999999999999999999999999999!important; border-radius: 4px; font-family: "Outfit", sans-serif; user-select: none; cursor: pointer; } .smartlist-oauth-button:hover { border-color: #000!important; background-color: #eee; } .smartlist-oauth-button:active { border-color: #000; background-color: #ddd; } .smartlist-oauth-button:focus { border-color: #000!important; box-shadow: inset 0px 0px 0px 1px #000; } .smartlist-small-oauth-button span { display: none; } .smartlist-small-oauth-button { width: 50px; align-items: center; justify-content: center; height: 50px; padding: 0; } .smartlist-rounded-oauth-button { border-radius: 999px; } .smartlist-dark-oauth-button { background: #212121; color: #fff; border-color: #303030!important } .smartlist-dark-oauth-button:hover { background: #303030; border-color: #fff!important } .smartlist-dark-oauth-button:active { background: #404040 } .smartlist-dark-oauth-button:focus { border-color: #fff!important; box-shadow: inset 0px 0px 0px 1px #fff; }</style>`
   	options.callback = options.callback || function() {};
     const token = this.key;
     const element = document.querySelector(el);
@@ -69,3 +63,13 @@ class SmartlistAuth {
     element.appendChild(button);
   }
 }
+
+let Auth = new SmartlistAuth('c4ca4238a0b923820dcc509a6f75849b');
+
+Auth.render('#oauth', {
+	popup: true,
+  // size: "small",
+  theme: "dark",
+  rounded: true,
+  callback: () => console.log("Closed popup. Verify that the user is logged in from your server")
+})
