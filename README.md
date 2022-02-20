@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="oauth"></div>
-    <script src="/path/to/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.min.js" async></script>
     <script>
       let Auth = new SmartlistAuth('your_api_token');
       Auth.render('#oauth', {
