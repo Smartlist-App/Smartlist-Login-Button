@@ -3,10 +3,10 @@
 
 ### Installation
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.min.js" async></script>
 ```
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.0.0/app.js" async></script>
+<script src="https://cdn.jsdelivr.net/gh/Smartlist-App/Smartlist-Login-Button@2.5.0/app.js" async></script>
 ```
 
 ### How to Use
@@ -16,19 +16,16 @@
   <head>
   </head>
   <body>
-    <div id="loginBTN"></div>
+    <div id="oauth"></div>
     <script src="/path/to/app.min.js"></script>
     <script>
-      var button = new SmartlistApiButton(document.getElementById('loginBTN'), {
-        appId: "YOUR_APP_ID",
+      let Auth = new SmartlistAuth('your_api_token');
+      Auth.render('#oauth', {
         popup: true,
-        callback() {
-          /**
-           * We'll redirect to the oAuth URI with the token. Use window.close() to close the login window after authorization is complete
-           * Make sure to verify the session is valid after the popup is closed!
-           */
-          console.log("Closed popup")
-        }
+        // size: "small",
+        // theme: "dark",
+        // rounded: true,
+        callback: () => console.log("Closed popup. Verify that the user is logged in from your server")
       })
     </script>
   </body>
